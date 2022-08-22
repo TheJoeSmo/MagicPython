@@ -60,6 +60,7 @@ keyword.operator.python
 keyword.operator.quantifier.regexp
 keyword.operator.unpacking.arguments.python
 keyword.operator.unpacking.parameter.python
+meta.attribute.magic.python
 meta.attribute.python
 meta.backreference.named.regexp
 meta.backreference.regexp

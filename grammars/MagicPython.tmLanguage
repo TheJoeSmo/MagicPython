@@ -659,6 +659,10 @@ it's probably control flow like:
           </dict>
           <dict>
             <key>include</key>
+            <string>#member-access-magic-attribute</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#member-access-attribute</string>
           </dict>
         </array>
@@ -692,6 +696,17 @@ it's probably control flow like:
             <string>#item-access</string>
           </dict>
         </array>
+      </dict>
+      <key>member-access-magic-attribute</key>
+      <dict>
+        <key>comment</key>
+        <string>Highlight attribute access of magic cases.</string>
+        <key>name</key>
+        <string>meta.attribute.magic.python</string>
+        <key>match</key>
+        <string>(?x)
+  \b (__[[:alpha:]_]\w*__) \b
+</string>
       </dict>
       <key>member-access-attribute</key>
       <dict>

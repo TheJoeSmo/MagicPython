@@ -183,4 +183,4 @@ some          : source.python
 __traceback__ : meta.member.access.python, source.python, support.variable.magic.python
 some          : source.python
 .             : meta.member.access.python, punctuation.separator.period.python, source.python
-__notspecial__ : meta.attribute.python, meta.member.access.python, source.python
+__notspecial__ : meta.attribute.magic.python, meta.member.access.python, source.python

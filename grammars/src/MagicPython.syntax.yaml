@@ -451,6 +451,7 @@ repository:
     patterns:
       - include: '#function-call'
       - include: '#member-access-base'
+      - include: '#member-access-magic-attribute'
       - include: '#member-access-attribute'
 
   member-access-base:
@@ -461,6 +462,13 @@ repository:
       - include: '#special-names'
       - include: '#line-continuation'
       - include: '#item-access'
+
+  member-access-magic-attribute:
+    comment: Highlight attribute access of magic cases.
+    name: meta.attribute.magic.python
+    match: |
+      (?x)
+        \b (__[[:alpha:]_]\w*__) \b
 
   member-access-attribute:
     comment: Highlight attribute access in otherwise non-specialized cases.

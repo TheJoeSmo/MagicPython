@@ -440,6 +440,9 @@ repository:
         include: "#member-access-base"
       }
       {
+        include: "#member-access-magic-attribute"
+      }
+      {
         include: "#member-access-attribute"
       }
     ]
@@ -464,6 +467,14 @@ repository:
         include: "#item-access"
       }
     ]
+  "member-access-magic-attribute":
+    comment: "Highlight attribute access of magic cases."
+    name: "meta.attribute.magic.python"
+    match: '''
+      (?x)
+        \\b (__[[:alpha:]_]\\w*__) \\b
+      
+    '''
   "member-access-attribute":
     comment: "Highlight attribute access in otherwise non-specialized cases."
     name: "meta.attribute.python"

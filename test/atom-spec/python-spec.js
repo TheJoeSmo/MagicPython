@@ -412,7 +412,7 @@ describe("Grammar Tests", function() {
       expect(tokens[42][1].value).toBe(".");
       expect(tokens[42][1].scopes).toEqual(["source.python","meta.member.access.python","punctuation.separator.period.python"]);
       expect(tokens[42][2].value).toBe("__notspecial__");
-      expect(tokens[42][2].scopes).toEqual(["source.python","meta.member.access.python","meta.attribute.python"]);
+      expect(tokens[42][2].scopes).toEqual(["source.python","meta.member.access.python","meta.attribute.magic.python"]);
     });
 
   it("test/builtins/builtins4.py", 
