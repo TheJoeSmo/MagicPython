@@ -17,7 +17,7 @@ built from scratch for robustness with an extensive test suite.
 
 Type hints in comments require support by the color scheme. The one
 used in the screenshot is
-[Chromodynamics](https://github.com/MagicStack/Chromodynamics).
+[Chromodynamics](https://github.com/TheJoeSmo/Chromodynamics).
 
 ![](https://magicstack.github.io/MagicPython/example.png)
 

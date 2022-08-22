@@ -481,7 +481,7 @@ repository:
           # letters in the beginning of the constant
           #
           # for more details refer to:
-          #   https://github.com/MagicStack/MagicPython/issues/42
+          #   https://github.com/TheJoeSmo/MagicPython/issues/42
           (
             _* [[:upper:]] [_\\d]* [[:upper:]]
           )

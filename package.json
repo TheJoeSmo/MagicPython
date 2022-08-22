@@ -1,6 +1,6 @@
 {
-  "name": "MagicPython",
-  "version": "1.1.1",
+  "name": "MagicPython310",
+  "version": "1.2.0",
   "engines": {
     "atom": "*",
     "node": "*",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MagicStack/MagicPython.git"
+    "url": "https://github.com/TheJoeSmo/MagicPython.git"
   },
   "bugs": {
-    "url": "https://github.com/MagicStack/MagicPython/issues"
+    "url": "https://github.com/TheJoeSmo/MagicPython/issues"
   },
   "description": "Syntax highlighter for cutting edge Python.",
   "license": "MIT",
-  "publisher": "magicstack",
+  "publisher": "joesmo12",
   "categories": [
     "Languages"
   ],

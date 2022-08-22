@@ -17,4 +17,4 @@ the installation:
     `Preferences.sublime-settings` file.
 
 If you find any oddities in how your Python code is highlighted, please
-file a bug at https://github.com/MagicStack/MagicPython/issues.
+file a bug at https://github.com/TheJoeSmo/MagicPython/issues.
