@@ -6256,7 +6256,7 @@ describe("Grammar Tests", function() {
       expect(tokens[0][4].value).toBe("__file__");
       expect(tokens[0][4].scopes).toEqual(["source.python","support.variable.magic.python"]);
       expect(tokens[1][0].value).toBe("__author__");
-      expect(tokens[1][0].scopes).toEqual(["source.python"]);
+      expect(tokens[1][0].scopes).toEqual(["source.python","support.variable.magic.custom.python"]);
     });
 
   it("test/expressions/special2.py", 

@@ -164,6 +164,7 @@ support.other.parenthesis.regexp
 support.type.exception.python
 support.type.metaclass.python
 support.type.python
+support.variable.magic.custom.python
 support.variable.magic.python
 variable.language.special.cls.python
 variable.language.special.self.python

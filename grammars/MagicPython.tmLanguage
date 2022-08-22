@@ -569,6 +569,10 @@ it's probably control flow like:
           </dict>
           <dict>
             <key>include</key>
+            <string>#magic-custom-variable-names</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#ellipsis</string>
           </dict>
           <dict>
@@ -2969,6 +2973,25 @@ indirectly through syntactic constructs
           <dict>
             <key>name</key>
             <string>support.variable.magic.python</string>
+          </dict>
+        </dict>
+      </dict>
+      <key>magic-custom-variable-names</key>
+      <dict>
+        <key>comment</key>
+        <string>magic variables which a class/module may have.</string>
+        <key>match</key>
+        <string>(?x)
+  \b(
+    __\w+__
+  )\b
+</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>support.variable.magic.custom.python</string>
           </dict>
         </dict>
       </dict>

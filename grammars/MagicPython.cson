@@ -379,6 +379,9 @@ repository:
         include: "#special-variables"
       }
       {
+        include: "#magic-custom-variable-names"
+      }
+      {
         include: "#ellipsis"
       }
       {
@@ -1931,6 +1934,18 @@ repository:
     captures:
       "1":
         name: "support.variable.magic.python"
+  "magic-custom-variable-names":
+    comment: "magic variables which a class/module may have."
+    match: '''
+      (?x)
+        \\b(
+          __\\w+__
+        )\\b
+      
+    '''
+    captures:
+      "1":
+        name: "support.variable.magic.custom.python"
   "magic-names":
     patterns: [
       {

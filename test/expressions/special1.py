@@ -8,4 +8,4 @@ __version__   : source.python, support.variable.magic.python
 __doc__       : source.python, support.variable.magic.python
               : source.python
 __file__      : source.python, support.variable.magic.python
-__author__    : source.python
+__author__    : source.python, support.variable.magic.custom.python
