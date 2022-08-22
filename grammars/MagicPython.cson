@@ -288,7 +288,7 @@ repository:
           (?x)
             \\b(?<!\\.)(
               async | continue | del | assert | break | finally | for
-              | from | elif | else | if | except | pass | raise
+              | from | elif | else | if | except | pass | raise | match | case
               | return | try | while | with
             )\\b
           

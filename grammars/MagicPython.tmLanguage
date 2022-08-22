@@ -450,7 +450,7 @@ it's probably control flow like:
             <string>(?x)
   \b(?&lt;!\.)(
     async | continue | del | assert | break | finally | for
-    | from | elif | else | if | except | pass | raise
+    | from | elif | else | if | except | pass | raise | match | case
     | return | try | while | with
   )\b
 </string>
