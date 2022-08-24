@@ -1,33 +1,29 @@
-# Magic Python [![Build Status](https://travis-ci.org/MagicStack/MagicPython.svg?branch=master)](https://travis-ci.org/MagicStack/MagicPython) [![apm](https://img.shields.io/apm/dm/magicpython.svg?label=Atom)](https://atom.io/packages/magicpython) [![Package Control](https://img.shields.io/packagecontrol/dt/MagicPython.svg?label=Sublime%20Text)](https://packagecontrol.io/packages/MagicPython) [![VSM](https://vsmarketplacebadge.apphb.com/installs-short/magicstack.MagicPython.svg?subject=Visual%20Studio%20Code)](https://marketplace.visualstudio.com/items?itemName=magicstack.MagicPython)
+# Magic Python 3.10
 
-This is a package with preferences and syntax highlighter for cutting edge
-Python 3, although Python 2 is well supported, too.  The syntax is compatible
-with [Sublime Text](http://www.sublimetext.com), [Atom](http://atom.io) and
-[Visual Studio Code](http://code.visualstudio.com). It is meant to be a drop-in
-replacement for the default Python package.
+<p align="center">
+<a href="https://github.com/TheJoeSmo/MagicPython/actions"><img alt="Actions Status" src="https://github.com/TheJoeSmo/MagicPython/actions/workflows/tests.yml/badge.svg"></a>
+<a href="https://github.com/TheJoeSmo/MagicPython/block/main/LICENSE.md"><img alt="License GPL3" src="https://img.shields.io/github/license/TheJoeSmo/MagicPython"></a>
+<a href="https://vsmarketplacebadge.apphb.com/installs-short/joesmo12.MagicPython310.svg"><img alt="Installs" src="https://vsmarketplacebadge.apphb.com/installs-short/joesmo12.MagicPython310.svg"></a>
+<a href="https://vsmarketplacebadge.apphb.com/version/joesmo12.MagicPython310.svg"><img alt="Visual Studio Code" src="https://vsmarketplacebadge.apphb.com/version/joesmo12.MagicPython310.svg"></a>
+</p>
 
-**Attention VSCode users**: MagicPython is used as the _default_
-Python highlighter in Visual Studio Code. Don't install it unless you
-want or need the cutting edge version of it. You will likely see no
-difference because you're already using MagicPython.
+A syntax highlighter for Python 3.10 and beyond Compatible with [Sublime Text](http://www.sublimetext.com) and [Visual Studio Code](http://code.visualstudio.com).  Unlike other plugins, this plugin is designed simple.  You download, install, and program.  No twists, turns, or roundabouts.  
 
-MagicPython correctly highlights all Python 3 syntax features,
-including type annotations, f-strings and regular expressions. It is
-built from scratch for robustness with an extensive test suite.
+For VSC, MagicPython310 should be used as the default highlighter.  It ensures that Python 3.10 and beyond will be properly highlighted.  Versions prior to 3.10 will likely appear properly, but this feature is not guaranteed.
+
+Our goal is to make match-case statements, type annotations, f-strings and regular expressions get the syntax highlighting they deserve.  It is built from scratch for robustness with an extensive test suite.
 
 Type hints in comments require support by the color scheme. The one
 used in the screenshot is
-[Chromodynamics](https://github.com/TheJoeSmo/Chromodynamics).
+[Chromodynamics](https://github.com/MagicPython/Chromodynamics).
 
 ![](https://magicstack.github.io/MagicPython/example.png)
 
 
-## Installation Instructions
+Installation Instructions
+-------------------------
 
 This is meant to be a drop-in replacement for the default Python package.
-
-In **Atom**, install the `MagicPython` package and disable the built-in
-`language-python` package.
 
 In **Sublime Text**, install `MagicPython` package via "Package Control" and
 disable the built-in `Python` package (using
@@ -198,7 +194,8 @@ all other keywords. Although the Python interpreter will produce an appropriate
 error message when reserved keywords are used as identifier names, it's still
 worth showing them early, to spare even this small debugging effort.
 
-## Development
+Development
+-----------
 
 You need `npm` and `node.js` to work on MagicPython.
 
@@ -229,7 +226,8 @@ If you intend to submit a pull request, please follow the following guidelines:
 - update unit tests and add new ones if needed, keeping the test cases short
   whenever possible
 
-### Multiple scopes
+Multiple scopes
+---------------
 
 It is sometimes necessary to assign multiple scopes to the same
 matched group. It is *very important* to keep in mind that the order
@@ -242,7 +240,8 @@ chose one convention and then translate it when necessary during
 compilation step. Our convention is therefore that *most important
 scope goes first*.
 
-## Color Scheme
+Color Scheme
+------------
 
 If you want to write your own color scheme for MagicPython you can
 find a list of all the scopes that we use in
