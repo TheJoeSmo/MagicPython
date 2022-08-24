@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    defaults:
+      run:
+        shell: bash
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      # Make Tests
+      - name: Make Tests
+        run: make
+      
+      # Run Tests
+      - name: Run Tests
+        run: make test
