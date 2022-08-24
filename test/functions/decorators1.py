@@ -59,7 +59,7 @@ q             : meta.function-call.arguments.python, meta.function.decorator.pyt
 kwargs        : meta.function-call.arguments.python, meta.function.decorator.python, source.python
 )             : meta.function.decorator.python, punctuation.definition.arguments.end.python, source.python
 @             : entity.name.function.decorator.python, meta.function.decorator.python, punctuation.definition.decorator.python, source.python
-classmethod   : meta.function.decorator.python, source.python, support.type.python
+classmethod   : meta.function.decorator.python, source.python, support.decorator.python
 def           : meta.function.python, source.python, storage.type.function.python
               : meta.function.python, source.python
 decorated     : entity.name.function.python, meta.function.python, source.python

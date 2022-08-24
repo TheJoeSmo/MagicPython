@@ -364,6 +364,9 @@ repository:
         include: "#builtin-types"
       }
       {
+        include: "#builtin-decorators"
+      }
+      {
         include: "#builtin-exceptions"
       }
       {
@@ -1795,6 +1798,9 @@ repository:
       {
         include: "#builtin-types"
       }
+      {
+        include: "#builtin-decorators"
+      }
     ]
   "builtin-possible-callables":
     patterns: [
@@ -1869,14 +1875,23 @@ repository:
     match: '''
       (?x)
         (?<!\\.) \\b(
-          bool | bytearray | bytes | classmethod | complex | dict
-          | float | frozenset | int | list | object | property
-          | set | slice | staticmethod | str | tuple | type
+          bool | bytearray | bytes | complex | dict
+          | float | frozenset | int | list | object
+          | set | slice | str | tuple | type
       
           (?# Although 'super' is not a type, it's related to types,
               and is special enough to be highlighted differently from
               other built-ins)
           | super
+        )\\b
+      
+    '''
+  "builtin-decorators":
+    name: "support.decorator.python"
+    match: '''
+      (?x)
+        (?<!\\.) \\b(
+          classmethod | property | staticmethod
         )\\b
       
     '''

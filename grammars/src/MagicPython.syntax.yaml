@@ -410,6 +410,7 @@ repository:
       - include: '#function-call'
       - include: '#builtin-functions'
       - include: '#builtin-types'
+      - include: '#builtin-decorators'
       - include: '#builtin-exceptions'
       - include: '#magic-names'
       - include: '#special-names'
@@ -1327,6 +1328,7 @@ repository:
       - include: '#builtin-exceptions'
       - include: '#builtin-functions'
       - include: '#builtin-types'
+      - include: '#builtin-decorators'
 
   builtin-possible-callables:
     patterns:
@@ -1389,14 +1391,22 @@ repository:
     match: |
       (?x)
         (?<!\.) \b(
-          bool | bytearray | bytes | classmethod | complex | dict
-          | float | frozenset | int | list | object | property
-          | set | slice | staticmethod | str | tuple | type
+          bool | bytearray | bytes | complex | dict
+          | float | frozenset | int | list | object
+          | set | slice | str | tuple | type
 
           (?# Although 'super' is not a type, it's related to types,
               and is special enough to be highlighted differently from
               other built-ins)
           | super
+        )\b
+
+  builtin-decorators:
+    name: support.decorator.python
+    match: |
+      (?x)
+        (?<!\.) \b(
+          classmethod | property | staticmethod
         )\b
 
   magic-function-names:

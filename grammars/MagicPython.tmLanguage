@@ -549,6 +549,10 @@ it's probably control flow like:
           </dict>
           <dict>
             <key>include</key>
+            <string>#builtin-decorators</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#builtin-exceptions</string>
           </dict>
           <dict>
@@ -2812,6 +2816,10 @@ correctly identify the "in" as a control flow keyword.
             <key>include</key>
             <string>#builtin-types</string>
           </dict>
+          <dict>
+            <key>include</key>
+            <string>#builtin-decorators</string>
+          </dict>
         </array>
       </dict>
       <key>builtin-possible-callables</key>
@@ -2899,14 +2907,25 @@ correctly identify the "in" as a control flow keyword.
         <key>match</key>
         <string>(?x)
   (?&lt;!\.) \b(
-    bool | bytearray | bytes | classmethod | complex | dict
-    | float | frozenset | int | list | object | property
-    | set | slice | staticmethod | str | tuple | type
+    bool | bytearray | bytes | complex | dict
+    | float | frozenset | int | list | object
+    | set | slice | str | tuple | type
 
     (?# Although 'super' is not a type, it's related to types,
         and is special enough to be highlighted differently from
         other built-ins)
     | super
+  )\b
+</string>
+      </dict>
+      <key>builtin-decorators</key>
+      <dict>
+        <key>name</key>
+        <string>support.decorator.python</string>
+        <key>match</key>
+        <string>(?x)
+  (?&lt;!\.) \b(
+    classmethod | property | staticmethod
   )\b
 </string>
       </dict>
