@@ -1,8 +1,8 @@
-.PHONY: all ci-test test release devenv publish
+.PHONY: all test release devenv publish
 
 all: devenv release
 
-ci-test: release
+test: release
 #	Run tests
 	./node_modules/.bin/syntaxdev test --tests test/**/*.py --syntax grammars/src/MagicPython.syntax.yaml
 	./node_modules/.bin/syntaxdev test --tests test/**/*.re --syntax grammars/src/MagicRegExp.syntax.yaml
@@ -11,9 +11,6 @@ update-test:
 #	Run tests and overwrite the output
 	./node_modules/.bin/syntaxdev test --tests test/**/*.py --syntax grammars/src/MagicPython.syntax.yaml --overwrite-tests
 	./node_modules/.bin/syntaxdev test --tests test/**/*.re --syntax grammars/src/MagicRegExp.syntax.yaml --overwrite-tests
-
-test: ci-test
-	atom -t test/atom-spec
 
 devenv:
 	npm install --dev
@@ -26,9 +23,6 @@ release:
 	./node_modules/.bin/syntaxdev build-cson --in grammars/src/MagicRegExp.syntax.yaml --out grammars/MagicRegExp.cson
 
 	./node_modules/.bin/syntaxdev scopes --syntax grammars/src/MagicPython.syntax.yaml > misc/scopes
-
-	./node_modules/.bin/syntaxdev atom-spec --package-name MagicPython --tests test/**/*.py --syntax grammars/src/MagicPython.syntax.yaml --out test/atom-spec/python-spec.js
-	./node_modules/.bin/syntaxdev atom-spec --package-name MagicPython --tests test/**/*.re --syntax grammars/src/MagicRegExp.syntax.yaml --out test/atom-spec/python-re-spec.js
 
 publish: test
 	# 	Check if the version specified in "package.json" matches the latest git tag
